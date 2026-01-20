@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useRouter } from "next/navigation"
+
 import Button from "@mui/material/Button"
 import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
@@ -9,19 +10,20 @@ import Typography from "@mui/material/Typography"
 import Divider from "@mui/material/Divider"
 
 export default function ResultsPage() {
-  const [profile, setProfile] = useState(null)
   const router = useRouter()
 
-  useEffect(() => {
+  const [profile] = useState(() => {
+    if (typeof window === "undefined") return null
+
     const storedProfile = sessionStorage.getItem("learningProfile")
 
     if (!storedProfile) {
       router.replace("/screener")
-      return
+      return null
     }
 
-    setProfile(JSON.parse(storedProfile))
-  }, [router])
+    return JSON.parse(storedProfile)
+  })
 
   if (!profile) {
     return (
