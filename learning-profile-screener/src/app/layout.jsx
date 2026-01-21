@@ -1,17 +1,16 @@
-"use client"
+import './globals.css'
+import '@/styles/theme.css'
 
-import { ThemeProvider, CssBaseline } from "@mui/material"
-import { theme } from "@/theme/theme"
-import "@/styles/globals.css"
+export const metadata = {
+  title: 'Learning Profile Screener',
+  description: 'Private, browser-based learning preference screener',
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          {children}
-        </ThemeProvider>
+      <body className="bg-app-dark text-app-text min-h-screen">
+        {children}
       </body>
     </html>
   )
