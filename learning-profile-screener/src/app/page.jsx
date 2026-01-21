@@ -3,7 +3,7 @@
 import { useReducer } from 'react'
 import questions from '@/data/questions'
 import Question from '@/components/questionnaire/Question'
-import ProgressBar from '@/components/questionnaire/ProgressBar'
+import ProgressBar from '@/app/components/questionnaire/ProgressBar'
 import {
   screenerReducer,
   initialState
