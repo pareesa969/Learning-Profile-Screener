@@ -5,7 +5,7 @@ import {
   CategoryScale,
   LinearScale,
   Tooltip,
-  Legend
+  Legend,
 } from 'chart.js'
 
 ChartJS.register(

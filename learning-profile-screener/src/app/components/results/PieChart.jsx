@@ -11,16 +11,12 @@ export default function PieChart({ learningStyle }) {
         data: [
           learningStyle.visual,
           learningStyle.auditory,
-          learningStyle.kinesthetic
+          learningStyle.kinesthetic,
         ],
-        backgroundColor: [
-          '#00BFFF',
-          '#6A0DAD',
-          '#D8BFFF'
-        ],
-        borderWidth: 0
-      }
-    ]
+        backgroundColor: ['#00BFFF', '#6A0DAD', '#D8BFFF'],
+        borderWidth: 0,
+      },
+    ],
   }
 
   const options = {
@@ -28,10 +24,10 @@ export default function PieChart({ learningStyle }) {
       legend: {
         position: 'bottom',
         labels: {
-          color: '#333'
-        }
-      }
-    }
+          color: '#333',
+        },
+      },
+    },
   }
 
   return <Pie data={data} options={options} />
