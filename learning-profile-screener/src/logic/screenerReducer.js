@@ -1,39 +1,40 @@
 export const initialState = {
   currentIndex: 0,
   answers: {},
-  isComplete: false
+  isComplete: false,
 }
 
 export function screenerReducer(state, action) {
   switch (action.type) {
-    case 'ANSWER_QUESTION':
+    case 'ANSWER':
       return {
         ...state,
         answers: {
           ...state.answers,
-          [action.key]: action.value
-        }
+          [action.key]: action.value,
+        },
       }
 
     case 'NEXT':
       return {
         ...state,
-        currentIndex: state.currentIndex + 1
+        currentIndex: state.currentIndex + 1,
       }
 
-    case 'PREVIOUS':
+    case 'PREV':
       return {
         ...state,
-        currentIndex: Math.max(state.currentIndex - 1, 0)
+        currentIndex: Math.max(0, state.currentIndex - 1),
       }
 
     case 'COMPLETE':
       return {
         ...state,
-        isComplete: true
+        isComplete: true,
       }
 
     case 'RESET':
+      localStorage.removeItem('learning-profile-screener')
       return initialState
 
     default:
