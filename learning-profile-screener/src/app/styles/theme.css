@@ -1,11 +1,16 @@
 :root {
+  /* Backgrounds */
   --bg-dark: #0A0A1A;
   --bg-panel: #EDE8F7;
 
-  --accent-primary: #00BFFF;
-  --accent-secondary: #6A0DAD;
+  /* Primary accents */
+  --accent-primary: #00BFFF; /* electric blue */
+  --accent-secondary: #6A0DAD; /* deep purple */
 
+  /* Soft accents */
   --accent-soft: #D8BFFF;
+
+  /* Text */
   --text-primary: #F5F5F5;
   --text-muted: #CFC8E8;
 }
