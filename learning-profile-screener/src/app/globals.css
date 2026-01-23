@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accessible focus ring */
+/* Accessibility */
 :focus-visible {
   outline: 3px solid var(--accent-primary);
   outline-offset: 2px;
-}
-
-/* Prevent horizontal overflow */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }

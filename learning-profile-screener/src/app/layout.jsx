@@ -1,5 +1,5 @@
 import './globals.css'
-import '@/styles/theme.css'
+import '@/app/styles/theme.css'
 
 export const metadata = {
   title: 'Learning Profile Screener',
